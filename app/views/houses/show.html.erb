@@ -6,7 +6,9 @@
   <%= link_to "Delete House", house_path(@house), method: :delete %>
   <br>
   <h2>Characters</h2>
+  <%if current_user %>
   <%= link_to "Add new character", new_house_character_path(@house) %>
+  <% end %>
   <% @house.characters.each do |character| %>
     <div>
       <p>
