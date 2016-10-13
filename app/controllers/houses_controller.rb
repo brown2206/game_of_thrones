@@ -8,7 +8,7 @@ class HousesController < ApplicationController
   end
 
   def create
-      @house = House.create!(house_params)
+      @house = House.create!(house_params.merge(user: current_user))
       redirect_to house_path(@house)
   end
 
@@ -22,17 +22,21 @@ class HousesController < ApplicationController
 
   def update
     @house = House.find(params[:id])
-    @house.update(house_params)
-
+    if @house.user == current_user && !@post.user.nil?
+      @house.update(house_params)
+    else
+      flash[:notice] = "Please don't attempt to edit someone else's post."
     redirect_to house_path(@house)
+  end
   end
 
   def destroy
     @house = House.find(params[:id])
-    @house.destroy
-
-    redirect_to houses_path
+    if @house.user == current_user
+    @house.destroy  
   end
+  redirect_to houses_path
+end
 
   private
     def house_params
