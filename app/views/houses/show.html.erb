@@ -1,0 +1,21 @@
+<%= link_to "&larr; Back".html_safe, houses_path %>
+<article>
+  <h2><%= @house.name %></h2>
+  <p> <img src="<%= @house.img_url%>"> </p>
+  <%= link_to "Edit House", edit_house_path(@house) %>
+  <%= link_to "Delete House", house_path(@house), method: :delete %>
+
+  <h3>Houses</h3>
+  <%= link_to "Add new character", new_house_character_path(@house) %>
+  <% @house.characters.each do |character| %>
+    <div>
+      <p>
+	       <h2><%= character.name %></h2>
+         <img src="<%= character.img_url %>">
+      </p>
+      <%= link_to "Edit", edit_house_character_path(@house, character) %> |
+      <%= link_to "Delete", house_character_path(@house, character), method: :delete %>
+    </div>
+  <% end %>
+  </div>
+</article>

@@ -1,0 +1,10 @@
+<h2>All Houses</h2>
+<%= link_to "Create New House", new_house_path %>
+<ul>
+  <% @houses.each do |house| %>
+  <li> <%= link_to house.name, house_path(house) %> </li>
+  <li> <img src="<%= house.img_url%>"> </li><br>
+  <hr class="style12">
+  <br>
+  <% end %>
+</ul>
