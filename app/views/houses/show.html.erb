@@ -4,8 +4,8 @@
   <p> <img src="<%= @house.img_url%>"> </p>
   <%= link_to "Edit House", edit_house_path(@house) %>
   <%= link_to "Delete House", house_path(@house), method: :delete %>
-
-  <h3>Houses</h3>
+  <br>
+  <h2>Characters</h2>
   <%= link_to "Add new character", new_house_character_path(@house) %>
   <% @house.characters.each do |character| %>
     <div>
