@@ -1,37 +1,24 @@
-# Houses of Westeros
+# README
 
-When you play the Game of Rails, you win or you die.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-You'll be making a Ruby on Rails app connecting Game of Thrones characters to their respective houses. Implement **full CRUD functionality** on the models.
+Things you may want to cover:
 
-We will start off with two models: `Houses` and `Characters`. Houses have many characters.
+* Ruby version
 
-The styling of the app is completely up to you.
+* System dependencies
 
-## Models and Migrations
+* Configuration
 
-- Create an ERD for your `houses` and `characters` tables
-- Create corresponding models and migrations
-- Create seed data that generates some houses and characters
+* Database creation
 
-> Use [this](http://gameofthrones.wikia.com/wiki/Game_of_Thrones_Wiki) if you need some source material for your seed file. Or just make up some names!
+* Database initialization
 
-## Views and Controllers
+* How to run the test suite
 
-- Add views and controllers.
+* Services (job queues, cache servers, search engines, etc.)
 
-## Bonus: User Authentication
+* Deployment instructions
 
-Once -- **and only** -- after you have completed all of the above and implemented full CRUD functionality for Houses and Characters, add a third User model using Devise.
-
-- You should be able to sign up, sign in and sign out of the app
-- Only logged-in users should be able to create a House or Character
-- A user can only update or delete a House or Character he/she created
-
-> Think about what associations you will have to set up in order to implement these features
-
-## Some More Bonuses
-
-- Add a third model for quotes associated with a character.
-- Try out many-to-many relationships with Categories to label Characters. A Character can have many Categories (e.g., "merciless") and a Category can be associated with many Characters. A Tag model/table could be helpful here...
-- Create an admin role (i.e., somebody who can update/delete anything) using [CanCanCan](https://github.com/CanCanCommunity/cancancan).
+* ...
