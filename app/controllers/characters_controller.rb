@@ -1,4 +1,6 @@
 class CharactersController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def new
       @house = House.find(params[:house_id])
       @character = Character.new
