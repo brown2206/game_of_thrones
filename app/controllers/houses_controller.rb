@@ -33,7 +33,7 @@ class HousesController < ApplicationController
   def destroy
     @house = House.find(params[:id])
     if @house.user == current_user
-    @house.destroy  
+    @house.destroy
   end
   redirect_to houses_path
 end
